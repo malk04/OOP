@@ -11,38 +11,40 @@ namespace laba1
     /// </summary>
     class Airport
     {
-        private string name; /// <summary> название аэропорта </summary>
-        private string codeIATA; /// <summary> код ИАТА </summary>
-        private int countOfFlights; /// <summary> количество рейсов </summary>
-        private int countOfAirplanes; /// <summary> количество самолётов </summary>
-        private int countOfEmployees; /// <summary> количество сотрудников </summary>
-        private float countOfPassengers; /// <summary> количество пассажиров в год в млн </summary>
-        private double revenue; /// <summary> доход за последний год в млрд.руб </summary>
+        /// <summary> название аэропорта </summary>
+        private string _name; 
+
+        /// <summary> код ИАТА </summary>
+        private string _codeIATA; 
+
+        /// <summary> количество рейсов </summary>
+        private int _countOfFlights; 
+
+        /// <summary> количество самолётов </summary>
+        private int _countOfAirplanes; 
+
+        /// <summary> количество сотрудников </summary>
+        private int _countOfEmployees; 
+
+        /// <summary> количество пассажиров в год в млн </summary>
+        private float _countOfPassengers; 
+
+        /// <summary> доход за последний год в млрд.руб </summary>
+        private double _revenue; 
 
         /// <summary>
         /// конструктор без параметров
         /// </summary>
         public Airport()
         {
-            name = "";
-            codeIATA = "";
-            countOfFlights = 0;
-            countOfAirplanes = 0;
-            countOfEmployees = 0;
-            countOfPassengers = 0F;
-            revenue = 0D;
+            _name = "";
+            _codeIATA = "";
+            _countOfFlights = 0;
+            _countOfAirplanes = 0;
+            _countOfEmployees = 0;
+            _countOfPassengers = 0F;
+            _revenue = 0D;
         }
-
-        /*public Airport()
-        {
-            name = "Домодедово";
-            codeIATA = "DME";
-            countOfFlights = 2950;
-            countOfAirplane = 282;
-            countOfEmployees = 2657;
-            countOfPassengers = 25.065F;
-            revenue = 3.2D;
-        }*/
 
         /// <summary>
         /// конструктор с двумя параметрами
@@ -51,13 +53,13 @@ namespace laba1
         /// <param name="code"> Код ИАТА аэропорта </param>
         public Airport(string n, string code)
         {
-            name = n;
-            codeIATA = code;
-            countOfFlights = 0;
-            countOfAirplanes = 0;
-            countOfEmployees = 0;
-            countOfPassengers = 0F;
-            revenue = 0D;
+            _name = n;
+            _codeIATA = code;
+            _countOfFlights = 0;
+            _countOfAirplanes = 0;
+            _countOfEmployees = 0;
+            _countOfPassengers = 0F;
+            _revenue = 0D;
         }
 
         /// <summary>
@@ -72,13 +74,13 @@ namespace laba1
         /// <param name="r"> Доход за последний год в млрд.руб </param>
         public Airport(string n, string code, int flights, int airplanes, int employees, float passengers, double r)
         {
-            name = n;
-            codeIATA = code;
-            countOfFlights = flights;
-            countOfAirplanes = airplanes;
-            countOfEmployees = employees;
-            countOfPassengers = passengers;
-            revenue = r;
+            _name = n;
+            _codeIATA = code;
+            _countOfFlights = flights;
+            _countOfAirplanes = airplanes;
+            _countOfEmployees = employees;
+            _countOfPassengers = passengers;
+            _revenue = r;
         }
 
         /// <summary>
@@ -87,38 +89,10 @@ namespace laba1
         /// <returns> Строка с полными данными аэропорта </returns>
         public override string ToString()
         {
-            return $"Название: {name}\nКод ИАТА: {codeIATA}\nКоличество рейсов: {countOfFlights}\n" +
-                $"Количество самолётов: {countOfAirplanes}\nКоличество сотрудников: {countOfEmployees}\n" +
-                $"Количество пассажиров в год в млн: {countOfPassengers}\nГодовой доход в млрд.руб: {revenue}";
+            return $"Название: {_name}\nКод ИАТА: {_codeIATA}\nКоличество рейсов: {_countOfFlights}\n" +
+                $"Количество самолётов: {_countOfAirplanes}\nКоличество сотрудников: {_countOfEmployees}\n" +
+                $"Количество пассажиров в год в млн: {_countOfPassengers}\nГодовой доход в млрд.руб: {_revenue}";
         }
-
-        /*public void PrintField(string field)
-        {
-            switch (field)
-            {
-                case "name":
-                    Console.WriteLine($"Название: {name}");
-                    break;
-                case "codeIATA":
-                    Console.WriteLine($"Код ИАТА: {codeIATA}");
-                    break;
-                case "countOfFlights":
-                    Console.WriteLine($"Количество рейсов: {countOfFlights}");
-                    break;
-                case "countOfAirplanes":
-                    Console.WriteLine($"Количество самолётов: {countOfAirplanes}");
-                    break;
-                case "countOfEmployees":
-                    Console.WriteLine($"Количество сотрудников: {countOfEmployees}");
-                    break;
-                case "countOfPassengers":
-                    Console.WriteLine($"Количество пассажиров в год в млн: {countOfPassengers}");
-                    break;
-                case "revenue":
-                    Console.WriteLine($"Годовой доход в млрд.руб: {revenue}");
-                    break;
-            }
-        }*/
 
         /// <summary>
         /// Геттер названия аэропорта
@@ -126,7 +100,7 @@ namespace laba1
         /// <returns> Название аэропорта </returns>
         public string GetName()
         {
-            return name;
+            return _name;
         }
 
         /// <summary>
@@ -135,7 +109,7 @@ namespace laba1
         /// <returns> Код ИАТА </returns>
         public string GetCodeIATA()
         {
-            return codeIATA;
+            return _codeIATA;
         }
 
         /// <summary>
@@ -144,7 +118,7 @@ namespace laba1
         /// <returns> Количество рейсов </returns>
         public int GetCountOfFlights()
         {
-            return countOfFlights;
+            return _countOfFlights;
         }
 
         /// <summary>
@@ -153,7 +127,7 @@ namespace laba1
         /// <returns> Количество самолётов </returns>
         public int GetCountOfAirplanes()
         {
-            return countOfAirplanes;
+            return _countOfAirplanes;
         }
 
         /// <summary>
@@ -162,7 +136,7 @@ namespace laba1
         /// <returns> Количество сотрудников </returns>
         public int GetCountOfEmployees()
         {
-            return countOfEmployees;
+            return _countOfEmployees;
         }
 
         /// <summary>
@@ -171,7 +145,7 @@ namespace laba1
         /// <returns> Количество пассажиров в год в млн </returns>
         public float GetCountOfPassengers()
         {
-            return countOfPassengers;
+            return _countOfPassengers;
         }
 
         /// <summary>
@@ -180,7 +154,7 @@ namespace laba1
         /// <returns> Доход за последний год в млрд.руб </returns>
         public double GetRevenue()
         {
-            return revenue;
+            return _revenue;
         }
 
         /// <summary>
@@ -189,7 +163,7 @@ namespace laba1
         /// <param name="s"> Название аэропорта </param>
         public void SetName(string s)
         {
-            name = s;
+            _name = s;
         }
 
         /// <summary>
@@ -198,7 +172,7 @@ namespace laba1
         /// <param name="s"> Код ИАТА аэропорта </param>
         public void SetCodeIATA(string s)
         {
-            codeIATA = s;
+            _codeIATA = s;
         }
 
         /// <summary>
@@ -207,7 +181,7 @@ namespace laba1
         /// <param name="x"> Количество рейсов </param>
         public void SetCountOfFlights(int x)
         {
-            countOfFlights = x;
+            _countOfFlights = x;
         }
 
         /// <summary>
@@ -216,7 +190,7 @@ namespace laba1
         /// <param name="x"> Количество самолётов </param>
         public void SetCountOfAirplanes(int x)
         {
-            countOfAirplanes = x;
+            _countOfAirplanes = x;
         }
 
         /// <summary>
@@ -225,7 +199,7 @@ namespace laba1
         /// <param name="x"> Количество сотрудников </param>
         public void SetCountOfEmployees(int x)
         {
-            countOfEmployees = x;
+            _countOfEmployees = x;
         }
 
         /// <summary>
@@ -234,7 +208,7 @@ namespace laba1
         /// <param name="x"> Количество пассажиров в год в млн </param>
         public void SetCountOfPassengers(float x)
         {
-            countOfPassengers = x;
+            _countOfPassengers = x;
         }
 
         /// <summary>
@@ -243,7 +217,7 @@ namespace laba1
         /// <param name="x"> Доход аэропорта за последний год в млрд.руб</param>
         public void SetRevenue(double x)
         {
-            revenue = x;
+            _revenue = x;
         }
 
         /// <summary>
@@ -251,7 +225,7 @@ namespace laba1
         /// </summary>
         public void PrintName()
         {
-            Console.WriteLine($"Название: {name}");
+            Console.WriteLine($"Название: {_name}");
         }
 
         /// <summary>
@@ -259,7 +233,7 @@ namespace laba1
         /// </summary>
         public void PrintCodeIATA()
         {
-            Console.WriteLine($"Код ИАТА: {codeIATA}");
+            Console.WriteLine($"Код ИАТА: {_codeIATA}");
         }
 
         /// <summary>
@@ -267,7 +241,7 @@ namespace laba1
         /// </summary>
         public void PrintCountOfFlights()
         {
-            Console.WriteLine($"Количество рейсов: {countOfFlights}");
+            Console.WriteLine($"Количество рейсов: {_countOfFlights}");
         }
 
         /// <summary>
@@ -275,7 +249,7 @@ namespace laba1
         /// </summary>
         public void PrintCountOfAirplanes()
         {
-            Console.WriteLine($"Количество самолётов: {countOfAirplanes}");
+            Console.WriteLine($"Количество самолётов: {_countOfAirplanes}");
         }
 
         /// <summary>
@@ -283,7 +257,7 @@ namespace laba1
         /// </summary>
         public void PrintCountOfEmployees()
         {
-            Console.WriteLine($"Количество сотрудников: {countOfEmployees}");
+            Console.WriteLine($"Количество сотрудников: {_countOfEmployees}");
         }
 
         /// <summary>
@@ -291,7 +265,7 @@ namespace laba1
         /// </summary>
         public void PrintCountOfPassengers()
         {
-            Console.WriteLine($"Количество пассажиров в год в млн: {countOfPassengers}");
+            Console.WriteLine($"Количество пассажиров в год в млн: {_countOfPassengers}");
         }
 
         /// <summary>
@@ -299,7 +273,7 @@ namespace laba1
         /// </summary>
         public void PrintRevenue()
         {
-            Console.WriteLine($"Годовой доход в млрд.руб: {revenue}");
+            Console.WriteLine($"Годовой доход в млрд.руб: {_revenue}");
         }
 
         /// <summary>
@@ -308,7 +282,7 @@ namespace laba1
         /// <returns> Количество самолётов в шестнадцатиричной системе счисления </returns>
         public string CountOfAirplanesHex()
         {
-            return Convert.ToString(countOfAirplanes, 16);
+            return Convert.ToString(_countOfAirplanes, 16);
         }
     }
 }
