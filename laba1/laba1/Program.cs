@@ -25,6 +25,8 @@ namespace laba1
             Console.WriteLine("Количество пассажиров в год в млн: " + domodedovo.GetCountOfPassengers());
             Console.WriteLine("Годовой доход в млрд.руб: " + domodedovo.GetRevenue());
             Console.WriteLine("\n");
+            Console.WriteLine("Количество самолётов в шестнадцатиричной системе счисления: " + domodedovo.CountOfAirplanesHex());
+            Console.WriteLine("\n");
             Console.WriteLine($"Введите новое название аэропорта {penza.GetName()}:");
             penza.SetName(Console.ReadLine());
             Console.WriteLine($"Введите новое количество сотрудников аэропорта {penza.GetName()}:");
@@ -32,7 +34,7 @@ namespace laba1
             Console.WriteLine($"Введите новое значение дохода в млрд.руб аэропорта {penza.GetName()}:");
             penza.SetRevenue(Convert.ToDouble(Console.ReadLine()));
             Console.WriteLine("\n");
-            penza.ToString();
+            Console.WriteLine(penza.ToString());
         }
     }
 }

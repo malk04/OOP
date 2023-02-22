@@ -47,6 +47,21 @@ namespace laba1
         }
 
         /// <summary>
+        /// конструктор с одним параметром
+        /// </summary>
+        /// <param name="n"> Название аэропорта </param>
+        public Airport(string n)
+        {
+            _name = n;
+            _codeIATA = "";
+            _countOfFlights = 0;
+            _countOfAirplanes = 0;
+            _countOfEmployees = 0;
+            _countOfPassengers = 0F;
+            _revenue = 0D;
+        }
+
+        /// <summary>
         /// конструктор с двумя параметрами
         /// </summary>
         /// <param name="n"> Название аэропорта </param>
@@ -269,7 +284,7 @@ namespace laba1
         }
 
         /// <summary>
-        /// Вывод годовой дохода аэропорта в млрд.руб в консоль
+        /// Вывод годового дохода аэропорта в млрд.руб в консоль
         /// </summary>
         public void PrintRevenue()
         {
