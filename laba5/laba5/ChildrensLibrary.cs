@@ -24,7 +24,7 @@ namespace laba5
         {
             return $"ChildrensLibrary." + "\r\n" + $"Name: {Name}," + "\r\n" + $"BooksNumber: {BooksNumber}," + "\r\n" +
                 $"ReadingRoomsCount: {ReadingRoomsCount}," + "\r\n" + $"Type: {Type}," + "\r\n" +
-                $"WithWiFi: {WithWiFi}," + "\r\n" + $"Rating: {Rating}," + "\r\n" + $"MinAge: {MaxAge}";
+                $"WithWiFi: {WithWiFi}," + "\r\n" + $"Rating: {Rating}," + "\r\n" + $"MaxAge: {MaxAge}";
         }
     }
 }
