@@ -41,9 +41,13 @@ namespace laba5
         /// </summary>
         public double Rating { get; set; }
 
+        /// <summary>
+        /// Переопределенный метод ToString
+        /// </summary>
+        /// <returns>Данные библиотеки в виде строки</returns>
         public override string ToString()
         {
-            return $"ChildrensLibrary." + "\r\n" + $"Name: {Name}," + "\r\n" + $"BooksNumber: {BooksNumber}," + "\r\n" +
+            return $"Library." + "\r\n" + $"Name: {Name}," + "\r\n" + $"BooksNumber: {BooksNumber}," + "\r\n" +
                 $"ReadingRoomsCount: {ReadingRoomsCount}," + "\r\n" + $"Type: {Type}," + "\r\n" +
                 $"WithWiFi: {WithWiFi}," + "\r\n" + $"Rating: {Rating}";
         }

@@ -16,11 +16,11 @@ namespace laba5
         /// <summary>
         /// Возвращает объект библиотеки
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="booksNumber"></param>
-        /// <param name="readingRoomsCount"></param>
-        /// <param name="withWiFi"></param>
-        /// <param name="rating"></param>
+        /// <param name="name">Название</param>
+        /// <param name="booksNumber">Кол-во книг</param>
+        /// <param name="readingRoomsCount">Кол-во читальных залов</param>
+        /// <param name="withWiFi">Наличие WiFi</param>
+        /// <param name="rating">Рейтинг</param>
         /// <returns>Объект библиотеки</returns>
         public Library createLibrary(string name, long booksNumber, int readingRoomsCount, bool withWiFi, double rating)
         {
